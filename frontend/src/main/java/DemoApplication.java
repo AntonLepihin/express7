@@ -2,12 +2,14 @@
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.Arrays;
 
 /**
  * Created by anton on 12/20/15.
  */
+@ComponentScan(value = {"com.ants.express7"})
 @SpringBootApplication
 public class DemoApplication {
 
