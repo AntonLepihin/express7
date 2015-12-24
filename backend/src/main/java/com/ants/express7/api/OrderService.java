@@ -1,4 +1,4 @@
-package api;
+package com.ants.express7.api;
 
 /**
  * Created by anton on 12/20/15.

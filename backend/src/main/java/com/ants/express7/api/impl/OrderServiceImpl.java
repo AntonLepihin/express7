@@ -1,7 +1,7 @@
-package api.impl;
+package com.ants.express7.api.impl;
 
-import api.ItemService;
-import api.OrderService;
+import com.ants.express7.api.ItemService;
+import com.ants.express7.api.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
