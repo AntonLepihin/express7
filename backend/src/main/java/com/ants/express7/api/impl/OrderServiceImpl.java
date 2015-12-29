@@ -3,6 +3,7 @@ package com.ants.express7.api.impl;
 import com.ants.express7.api.ItemService;
 import com.ants.express7.api.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
+@Qualifier(value = "orderService")
 public class OrderServiceImpl implements OrderService {
 
     @Autowired

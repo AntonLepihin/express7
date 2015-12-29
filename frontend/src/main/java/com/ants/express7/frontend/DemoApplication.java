@@ -14,7 +14,7 @@ import java.util.Arrays;
 /**
  * Created by anton on 12/20/15.
  */
-@ComponentScan(value = {"com.ants.express7.frontend"})
+@ComponentScan(value = {"com.ants.express7"})
 @SpringBootApplication//(exclude = { org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration.class })
 @EnableAutoConfiguration
 //@Import({DebugServlet.class})

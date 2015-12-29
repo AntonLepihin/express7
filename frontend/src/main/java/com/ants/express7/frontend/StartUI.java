@@ -1,6 +1,7 @@
 package com.ants.express7.frontend;
 
 import com.ants.express7.api.OrderService;
+import com.ants.express7.frontend.service.TestService;
 import com.vaadin.annotations.Push;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
@@ -10,22 +11,27 @@ import com.vaadin.spring.navigator.SpringViewProvider;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by anton on 12/20/15.
  */
+@Component
 @Theme("valo")
-@Widgetset("com.ants.express7.frontend.widgets")
-@Push
+//@Widgetset("com.ants.express7.frontend.widgets")
+//@Push
 @SpringUI
 //@Controller
 public class StartUI extends UI {
 
     @Autowired
     private SpringViewProvider viewProvider;
+//
+//    @Autowired ()
+//    private OrderService orderService;
 
     @Autowired
-    private OrderService service;
+    private TestService testService;
 
     public StartUI() {
         super();
@@ -33,7 +39,9 @@ public class StartUI extends UI {
 
     @Override
     protected void init(VaadinRequest request) {
-        setContent(new Label(service.sayHi()));
+        OrderService orderService = Backend.get().orderService();
+        String hi = orderService.sayHi();
+        setContent(new Label(testService.getMessage()));
     }
 
 }
